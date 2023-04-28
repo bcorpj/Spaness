@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
+    @wireUiScripts
     @livewireStyles
 </head>
 <body>
@@ -16,9 +17,9 @@
     <div class="w-80 h-screen border-r p-5">
         <p class="text-2xl mb-2">Sidebar</p>
         <div class="flex flex-col items-center">
-            <button class="p-2 border w-full h-10 mb-2">Sad</button>
-            <button class="p-2 border w-full h-10 mb-2">Mad</button>
-            <button class="p-2 border w-full h-10 mb-2">Nad</button>
+            <livewire:route name="About" to="/about" />
+            <livewire:route name="Main" to="/main" />
+            <livewire:route name="Home" to="/home" />
         </div>
     </div>
     {{ $slot }}
